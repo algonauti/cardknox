@@ -27,4 +27,7 @@ Gem::Specification.new do |spec|
     end
   end
   spec.require_paths = ["lib"]
+
+  # Uncomment to register a new dependency of your gem
+  spec.add_dependency "zeitwerk", "~> 2.6"
 end
