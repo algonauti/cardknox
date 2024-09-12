@@ -1,5 +1,13 @@
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
 AllCops:
+  NewCops: enable
   TargetRubyVersion: 3.0
+
+Gemspec/RequireMFA:
+  Enabled: false
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
