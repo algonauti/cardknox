@@ -1,4 +1,6 @@
+/.byebug_history
 /.bundle/
+/.env
 /.yardoc
 /_yardoc/
 /coverage/
