@@ -19,7 +19,7 @@ gem 'cardknox'
 ```ruby
 api = Cardknox::API::Client.new('your_api_key') do |config|
   config.gateway_version = "5.0.0"
-  config.software_name = "Cardknox ruby client"
+  config.software_name = "CardKnox Ruby client"
   config.software_version = Cardknox::VERSION
 end
 
