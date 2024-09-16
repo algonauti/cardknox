@@ -5,7 +5,7 @@ require "zeitwerk"
 require_relative "cardknox/version"
 
 module Cardknox
-  class Error < StandardError; end
+  BASE_URL = "https://x1.cardknox.com"
 
   class << self
     def loader
@@ -15,6 +15,5 @@ module Cardknox
       end
     end
   end
-
   loader.setup
 end
