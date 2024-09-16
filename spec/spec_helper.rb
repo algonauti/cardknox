@@ -5,7 +5,16 @@ require "dotenv/load"
 
 Dotenv.overload(".env", ".env.test")
 
+Dir[Pathname.new(File.dirname(__dir__)).join("spec/support/**/*.rb")].each do |file|
+  require file
+end
+
+module TestHelpers
+end
+
 RSpec.configure do |config|
+  config.include(TestHelpers)
+
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
 
