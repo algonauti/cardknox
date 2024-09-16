@@ -5,16 +5,14 @@ require "zeitwerk"
 require_relative "cardknox/version"
 
 module Cardknox
-  class Error < StandardError; end
+  BASE_URL = "https://x1.cardknox.com"
 
   class << self
     def loader
       @loader ||= Zeitwerk::Loader.for_gem.tap do |loader|
         loader.inflector.inflect("api" => "API")
-        loader.inflector.inflect("http_client" => "HTTPClient")
       end
     end
   end
-
   loader.setup
 end

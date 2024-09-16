@@ -10,6 +10,9 @@ Dir[Pathname.new(File.dirname(__dir__)).join("spec/support/**/*.rb")].each do |f
 end
 
 module TestHelpers
+  def api
+    @api ||= Cardknox::API::Client.new(ENV["API_KEY"])
+  end
 end
 
 RSpec.configure do |config|
