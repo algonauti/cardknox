@@ -10,5 +10,13 @@ Dotenv.overload(".env")
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
 
+def api
+  @__api ||= Cardknox::API::Client.new(ENV["API_KEY"]) do |config|
+    config.gateway_version = "5.0.0"
+    config.software_name = "Cardknox ruby client"
+    config.software_version = Cardknox::VERSION
+  end
+end
+
 require "irb"
 IRB.start(__FILE__)
