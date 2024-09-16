@@ -11,7 +11,6 @@ module Cardknox
     def loader
       @loader ||= Zeitwerk::Loader.for_gem.tap do |loader|
         loader.inflector.inflect("api" => "API")
-        loader.inflector.inflect("http_client" => "HTTPClient")
       end
     end
   end
