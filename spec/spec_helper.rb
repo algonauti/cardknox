@@ -10,7 +10,6 @@ Dir[Pathname.new(File.dirname(__dir__)).join("spec/support/**/*.rb")].each do |f
 end
 
 module TestHelpers
-
 end
 
 RSpec.configure do |config|
