@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
+require "digest"
 require "faraday"
 require "zeitwerk"
+
 require_relative "cardknox/version"
 
 module Cardknox
