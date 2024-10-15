@@ -21,7 +21,7 @@ module Cardknox
 
     def parse(response)
       JSON.parse(response.body, symbolize_names: true).tap do |payload|
-        if payload[:xStatus] != "Approved"
+        unless ["Approved", "Success"].include?(payload[:xStatus])
           raise Error::TransactionFailure.new(payload[:xError], response)
         end
       end

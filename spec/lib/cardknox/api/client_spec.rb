@@ -6,5 +6,6 @@ RSpec.describe(Cardknox::API::Client) do
   describe "Respond to" do
     it { is_expected.to(respond_to(:status)) }
     it { is_expected.to(respond_to(:transaction)) }
+    it { is_expected.to(respond_to(:report)) }
   end
 end
