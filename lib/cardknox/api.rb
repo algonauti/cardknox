@@ -24,6 +24,16 @@ module Cardknox
         }))
       end
 
+      def report(command, params = {})
+        @agent.post("/reportjson", params.merge({
+          xKey: config.api_key,
+          xVersion: config.gateway_version,
+          xSoftwareName: config.software_name,
+          xSoftwareVersion: config.software_version,
+          xCommand: command,
+        }))
+      end
+
       def status
         @agent.get("/status")
       end
