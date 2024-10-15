@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cardknox (0.2.0)
+    cardknox (0.3.0)
       faraday (~> 2)
       zeitwerk (~> 2.6)
 
